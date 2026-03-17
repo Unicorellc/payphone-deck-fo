@@ -401,6 +401,31 @@ section {
   .fin-table th, .fin-table td { padding: 8px 10px; }
 }
 
+/* ===== PRINT / PDF ===== */
+@media print {
+  * { transition: none !important; animation: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  section { min-height: auto !important; padding: 32px 48px !important; page-break-after: always; }
+  section:last-child { page-break-after: auto; }
+  .nav, .scroll-progress, .glow-orb { display: none !important; }
+  body { background: #111 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .divider { display: none !important; }
+  .card-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 12px !important; }
+  .glass { padding: 20px !important; }
+  .card-num { font-size: 28px !important; }
+  .card-label { font-size: 12px !important; }
+  .lifecycle { grid-template-columns: repeat(4, 1fr) !important; gap: 10px !important; }
+  .lifecycle-step { padding: 16px 12px !important; }
+  .highlight-box { margin-top: 20px !important; padding: 20px !important; }
+  .stress-box { margin-top: 16px !important; padding: 16px 20px !important; }
+  .stat-row { gap: 24px !important; margin-top: 20px !important; }
+  .mega { font-size: clamp(28px, 4vw, 44px) !important; }
+  .fin-table { margin-top: 20px !important; }
+  .flow-wrap { margin: 24px 0 16px !important; }
+  #cover { padding-bottom: 8vh !important; justify-content: center !important; }
+  #close { min-height: 40vh !important; }
+}
+
 /* ===== WATERMARK ===== */
 .glass .watermark {
   position: absolute;
